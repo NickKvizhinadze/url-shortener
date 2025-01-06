@@ -42,7 +42,7 @@ jobs:
       uses: azure/arm-deploy@v2
       with:
         resourceGroupName: ${{ vars.RESOURCE_GROUP_NAME }}
-        template: ./infrastructure/main.bicep
+        template: ../infrastructure/main.bicep
         parameters: customDomain=${{ vars.CUSTOM_DOMAIN }} pgSqlPassword=${{ secrets.PG_SQL_PASSWORD }}
         additionalArguments: "--only-show-errors"
 
@@ -72,7 +72,7 @@ jobs:
         uses: azure/arm-deploy@v2
         with:
           resourceGroupName: ${{ vars.RESOURCE_GROUP_NAME }}
-          template: ./infrastructure/main.bicep
+          template: ../infrastructure/main.bicep
           parameters: customDomain=${{ vars.CUSTOM_DOMAIN }} pgSqlPassword=${{ secrets.PG_SQL_PASSWORD }}
           additionalArguments: "--only-show-errors"
 

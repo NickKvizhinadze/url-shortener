@@ -33,14 +33,14 @@ az deployment group create --resource-group urlshortener-dev --template-file inf
 ```bash
 az ad sp create-for-rbac --name "GitHub-Actions-SP" \
                          --role contributor \
-                         --scopes /subscriptions/89518450-6f9c-4039-8834-c5bab3ad3e92 \
+                         --scopes /subscriptions/c09259d3-d160-4e74-a531-6d12d656dfd6 \
                          --sdk-auth
 ```
 
 #### Apply to Custom Contributor Role
 
 ```bash
-az ad sp create-for-rbac --name "GitHub-Actions-SP" --role 'infra_deploy' --scopes /subscriptions/89518450-6f9c-4039-8834-c5bab3ad3e92 --sdk-auth
+az ad sp create-for-rbac --name "GitHub-Actions-SP" --role 'infra_deploy' --scopes /subscriptions/c09259d3-d160-4e74-a531-6d12d656dfd6 --sdk-auth
 ```
 
 https://learn.microsoft.com/en-us/azure/role-based-access-control/troubleshooting?tabs=bicep
