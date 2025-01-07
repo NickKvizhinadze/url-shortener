@@ -8,12 +8,12 @@ module keyVault 'modules/secrets/keyvault.bicep' = {
   params: {
     vaultName: keyVaultName
     location: location
-    //   subnets: [
-    //     resourceId('Microsoft.Network/virtualNetworks/subnets', vnetName, apiSubnetName)
-    //     resourceId('Microsoft.Network/virtualNetworks/subnets', vnetName, cosmosTriggerSubnetName)
-    //     resourceId('Microsoft.Network/virtualNetworks/subnets', vnetName, tokenRangeSubnetName)
-    //     resourceId('Microsoft.Network/virtualNetworks/subnets', vnetName, redirectApiSubnetName)
-    //   ]
+    subnets: [
+      resourceId('Microsoft.Network/virtualNetworks/subnets', vnetName, apiSubnetName)
+      resourceId('Microsoft.Network/virtualNetworks/subnets', vnetName, cosmosTriggerSubnetName)
+      resourceId('Microsoft.Network/virtualNetworks/subnets', vnetName, tokenRangeSubnetName)
+      resourceId('Microsoft.Network/virtualNetworks/subnets', vnetName, redirectApiSubnetName)
+    ]
   }
 }
 
