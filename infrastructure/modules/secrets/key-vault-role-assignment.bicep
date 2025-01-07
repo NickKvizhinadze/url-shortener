@@ -18,3 +18,4 @@ resource keyVaultRoleAssignment 'Microsoft.Authorization/roleAssignments@2022-04
     }
   }
 ]
+
