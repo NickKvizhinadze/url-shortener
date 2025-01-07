@@ -8,12 +8,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_SolutionItems", "_Solution
 		..\.github\workflows\api.yml = ..\.github\workflows\api.yml
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{00353821-6680-4238-ACFA-D6075265E5E8}"
-	ProjectSection(SolutionItems) = preProject
-		..\infrastructure\main.bicep = ..\infrastructure\main.bicep
-		..\infrastructure\modules\compute\appservice.bicep = ..\infrastructure\modules\compute\appservice.bicep
-	EndProjectSection
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
