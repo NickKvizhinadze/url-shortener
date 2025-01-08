@@ -21,13 +21,13 @@ jobs:
       with:
         dotnet-version: 9.0.x
     - name: Restore dependencies
-      run: dotnet restore UrlShortener/UrlShortener.sln
+      run: dotnet restore UrlShortener/Api/src/UrlShortener.sln
     - name: Build
-      run: dotnet build UrlShortener/Api/UrlShortener.sln --no-restore
+      run: dotnet build UrlShortener/Api/src/UrlShortener.sln --no-restore
     - name: Test
-      run: dotnet test UrlShortener/Api/UrlShortener.sln --no-build --verbosity normal
+      run: dotnet test UrlShortener/Api/src/UrlShortener.sln --no-build --verbosity normal
     - name: dotnet publish
-      run: dotnet publish UrlShortener/Api/UrlShortener.Api -c Release -o ${{env.DOTNET_ROOT}}/myapp 
+      run: dotnet publish UrlShortener/Api/src/UrlShortener.Api -c Release -o ${{env.DOTNET_ROOT}}/myapp 
     - name: Upload artifact for deployment job
       uses: actions/upload-artifact@v4
       with:
