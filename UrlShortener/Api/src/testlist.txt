@@ -3,6 +3,3 @@ TEST LIST
 Unique tokens
 Accept multiple Ranges
 _tokenRage on Token Provider can be null when getting the token
-
-- Who's the creator and when was created
--when was created
