@@ -3,6 +3,7 @@ using Scalar.AspNetCore;
 using UrlShortener.Api.Extensions;
 using UrlShortener.Core;
 using UrlShortener.Core.Urls.Add;
+using UrlShortener.Infrastructure.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -20,7 +21,8 @@ if (!string.IsNullOrEmpty(keyVaultName))
 builder.Services.AddOpenApi();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSingleton(TimeProvider.System);
-builder.Services.AddUrlFeature();
+builder.Services.AddUrlFeature()
+    .AddCosmosUrlDataStore(builder.Configuration);
 
 var app = builder.Build();
 
